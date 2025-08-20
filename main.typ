@@ -9,9 +9,8 @@
   title: [Mini: The Minimal Language | 极简语言],
 )
 
-#let enable_en = false;
+#let enable_en = true;
 #let enable_zh = true;
-#let split = [#v(0.8em) *#h(0.30fr) \*#h(0.06fr) \* #h(0.06fr)\* #h(0.30fr)* #v(0.3em)];
 
 #set text(
   lang: { if enable_zh { "zh" } else { "en" } },
@@ -168,39 +167,41 @@
 
 #set page(numbering: "1")
 #counter(page).update(1)
+#let split = {v(0.8em); strong([#h(0.30fr) \*#h(0.06fr) \* #h(0.06fr)\* #h(0.30fr)]); v(0.3em)}
+#align(horizon)[
 
-#en[Mini is an attempt to create the simplest naturalistic language for human communication.]
+  #en[Mini is an attempt to create the simplest naturalistic language for human communication.]
 
-#zh[Mini语是一种旨在为人类交流创造最简单的自然主义语言的尝试。]
+  #zh[Mini语是一种旨在为人类交流创造最简单的自然主义语言的尝试。]
 
-#en[With simple phonetics, inflectionless grammar, and a global vocabulary of exactly 1,000 words, Mini is ideal for use as an #underline[international auxiliary language.]]
+  #en[With simple phonetics, inflectionless grammar, and a global vocabulary of exactly 1,000 words, Mini is ideal for use as an #underline[international auxiliary language.]]
 
-#zh[Mini语的语音简单，语法无屈折，只有 1000 个单词的全球词汇，是作为#underline[国际辅助语言]的理想选择。]
+  #zh[Mini语的语音简单，语法无屈折，只有 1000 个单词的全球词汇，是作为#underline[国际辅助语言]的理想选择。]
 
-#en[Features of Mini:]
-#en[
-  - *Subject-Verb-Object*
-  - *Purely analytic grammar*
-  - *Part-of-speech invariance:* Mini uses three particles to mark the part of speech. This allows most words to be used any part of speech.
-  - *Only 19 phonemes:* Five vowels /a e i o u/ and fourteen consonants /b d f g k l m n p r s t v/ and j /dʒ/
-  - *Simple phonotactics:* Each syllable has a simple consonant-vowel structure (C?Vn?), similar to many Austronesian languages.
-  - *Only 1,000 words:* The goal of Mini is to have as limited a vocabulary as possible while still being sufficient for most spoken conversations, news articles, blog posts, short stories, etc. — everything except technical jargon.
-  - *Powerful word-compounding system*
-  - *International breadth & depth:* Mini strives to balance international recognizability with language breadth. A majority of words are sourced from English and the Romance languages, but many other source languages are included, from Arabic to Zulu.
+  #en[Features of Mini:]
+  #en[
+    - *Subject-Verb-Object*
+    - *Purely analytic grammar*
+    - *Part-of-speech invariance:* Mini uses three particles to mark the part of speech. This allows most words to be used any part of speech.
+    - *Only 19 phonemes:* Five vowels /a e i o u/ and fourteen consonants /b d f g k l m n p r s t v/ and j /dʒ/
+    - *Simple phonotactics:* Each syllable has a simple consonant-vowel structure (C?Vn?), similar to many Austronesian languages.
+    - *Only 1,000 words:* The goal of Mini is to have as limited a vocabulary as possible while still being sufficient for most spoken conversations, news articles, blog posts, short stories, etc. — everything except technical jargon.
+    - *Powerful word-compounding system*
+    - *International breadth & depth:* Mini strives to balance international recognizability with language breadth. A majority of words are sourced from English and the Romance languages, but many other source languages are included, from Arabic to Zulu.
+  ]
+
+  #zh[Mini语的特征：]
+  #zh[
+    - *主语-动词-宾语（SVO）结构*
+    - *纯粹的分析型语法*
+    - *无词性屈折：*Mini 使用三个基本粒子来标记词性。这使得大多数单词可以用作任何词性。
+    - *只有19个音素：*5 个元音 /a e i o u/ 和 14 个辅音 /b d f g k l m n p r s t v/ 和 j /dʒ/
+    - *简单的音节结构：*每个音节都有一个简单的辅音元音结构(C?Vn?)，类似许多南岛语。
+    - *只有 1000 个单词：*Mini 的目标是拥有尽可能有限的词汇量，同时仍然满足大多数口语谈话、新闻报道、博客文章、短篇故事等。——涵盖除了技术术语的一切。
+    - *强大的词复合系统*
+    - *国际广度与深度*：Mini 致力于平衡国际的可识别性和语言的广度。大多数单词来源于英语和罗曼语言，但包括许多从阿拉伯语到祖鲁语的其他源语言。
+  ]
 ]
-
-#zh[Mini语的特征：]
-#zh[
-  - *主语-动词-宾语（SVO）结构*
-  - *纯粹的分析型语法*
-  - *无词性屈折：*Mini 使用三个基本粒子来标记词性。这使得大多数单词可以用作任何词性。
-  - *只有19个音素：*5 个元音 /a e i o u/ 和 14 个辅音 /b d f g k l m n p r s t v/ 和 j /dʒ/
-  - *简单的音节结构：*每个音节都有一个简单的辅音元音结构(C?Vn?)，类似许多南岛语。
-  - *只有 1000 个单词：*Mini 的目标是拥有尽可能有限的词汇量，同时仍然满足大多数口语谈话、新闻报道、博客文章、短篇故事等。——涵盖除了技术术语的一切。
-  - *强大的词复合系统*
-  - *国际广度与深度*：Mini 致力于平衡国际的可识别性和语言的广度。大多数单词来源于英语和罗曼语言，但包括许多从阿拉伯语到祖鲁语的其他源语言。
-]
-
 #en[= I. Introduction]
 
 #zh[= 一、引言]
@@ -239,7 +240,7 @@
 
 #zh[威尔金斯没有完成他的语言。他出版的手稿只是一个概念验证——但即使在那时也有问题。首先，威尔金斯的单词推导方法使得单词很难区分：同根词的读音过于相似，难以区分。威尔金斯本人也会犯错误，将_Gade_（大麦）误认为_Gape_（郁金香）。]
 
-#en[The more damning problem for Wilkins’ approach is philosophical: there simply is no one obvious taxonomy for all objects and concepts. It is certainly true that one can create a language that derives all of its vocabulary from a few basic concepts. But what makes certain concepts basic rather than others? And what about derived words? What are the rules for deriving new words from basic concepts? Are those rules for derivation simple algorithmic procedures or complex divinations that require human discretion? And if those word derivations cannot be performed algorithmically — and in Wilkin’s case, they were not — then is there not a degree of arbitrariness and convention in the word choices themselves? These were questions Wilkins could not answer.]
+#en[The more damning problem for Wilkins' approach is philosophical: there simply is no one obvious taxonomy for all objects and concepts. It is certainly true that one can create a language that derives all of its vocabulary from a few basic concepts. But what makes certain concepts basic rather than others? And what about derived words? What are the rules for deriving new words from basic concepts? Are those rules for derivation simple algorithmic procedures or complex divinations that require human discretion? And if those word derivations cannot be performed algorithmically — and in Wilkin’s case, they were not — then is there not a degree of arbitrariness and convention in the word choices themselves? These were questions Wilkins could not answer.]
 
 #zh[对于威尔金斯的方法，其更致命的问题是哲学上的：对于所有的对象和概念来说，根本不存在一个明显的分类法。诚然可以创造一种语言，使其所有词汇均从一些基本概念中产生，然而，是什么使某些概念成为基本概念，而非其他概念呢？派生词如何处理？从基本概念推导新单词的规则是什么？这些推导规则是简单的算法程序还是需要人类斟酌的复杂揣测？倘其推导过程无法算法化——在威尔尼斯那里，它们不能——则词汇遴选本身就不具备一定程度的任意性和习惯吗？威尔金斯无法回答这些问题。]
 
@@ -247,7 +248,7 @@
 
 #zh[但构建一种更新、更简单、更理性的语言的梦想依然存在着。其后数世纪，语言学家、爱好者与狂热的乌托邦分子构想出的语言，竟超出了人类所说语言的总和。1827 年，一位法国语言学家创造了一种基于音符的语言——索来索语（Solresol）。在 20 世纪，一群爱好者创造了逻辑语（Lojban），这是一种模仿谓词演算的语言，具有完全规则的语法(还有一个 Yacc 解析器来证明它！)。(Lojban 本身是一种早期的 Loglan 逻辑语言的后裔。)]
 
-#en[The most famous constructed language, of course, is Esperanto. Esperanto was born out of Polish linguist L.L. Zamenhof’s dream of international unity and human solidarity: He created the language to serve as a culturally neutral universal second language, which he believed would foster peace. (Esperanto’s utopian ideals were not without detractors. One particularly acerbic critic devotes several paragraphs to excoriating Esperantists in his best-selling political manifesto.)]
+#en[The most famous constructed language, of course, is Esperanto. Esperanto was born out of Polish linguist L.L. Zamenhof's dream of international unity and human solidarity: He created the language to serve as a culturally neutral universal second language, which he believed would foster peace. (Esperanto's utopian ideals were not without detractors. One particularly acerbic critic devotes several paragraphs to excoriating Esperantists in his best-selling political manifesto.)]
 
 #zh[最著名的人造语言当然是世界语（Esperanto）。波兰语言学家柴门霍夫（L.L. Zamenhof）怀揣国际团结和人类团结的梦想创造了这门语言：为了其作为一种文化中立的通用第二语言，以促进和平。(世界语的乌托邦式理想并非没有批评者。一位特别尖刻的评论家在他最畅销的政治宣言中用了好几段话来痛斥世界语者。)]
 
@@ -269,7 +270,7 @@
 
 #zh[在得知道本语（Toki Pona）后，我个人的语言学兴趣被重新唤醒了。道本语是由语言学家索尼娅·朗（Sonja Lang）创造的一门出色的微型语言，仅包含120-125个单词。与_威尔金斯的真实符号_或逻辑语不同，道本语的目标并非成为一门更具逻辑性和精确性的语言——恰恰相反。Lang最初创建道本语是为了应对抑郁症，并打算让它简单而可爱（cute）。它无疑实现了这一点。]
 
-#en[TP’s simplicity and cuteness is a result of its simple phonology and simple vocabulary limited to “cute” words like mu (moo) or mama (parent). The grammatical premise of TP is no less cute: it employs strict Subject-Verb-Object word order and uses a single particle word, li, to separate the subject from the predicate and another, e, to introduce the direct object. This allows the words of TP to serve as many different parts of speech depending on their position in a sentence and ensures that TP’s small vocabulary is put to good use.]
+#en[TP's simplicity and cuteness is a result of its simple phonology and simple vocabulary limited to "cute" words like mu (moo) or mama (parent). The grammatical premise of TP is no less cute: it employs strict Subject-Verb-Object word order and uses a single particle word, li, to separate the subject from the predicate and another, e, to introduce the direct object. This allows the words of TP to serve as many different parts of speech depending on their position in a sentence and ensures that TP’s small vocabulary is put to good use.]
 
 #zh[道本语的简单和可爱源于其简单的音位系统及仅包含如"mu"（哞）或"mama"（父母）这类“可爱”词汇的简单词库。道本语的语法前提同样可爱：它采用严格的 主-谓-宾 语序，使用一个单一粒子词"li"来分隔主语和谓语，用另一个粒子词"e"来引入直接宾语。这使得道本语的词语依据其在句中的位置可以充当多种不同的词类，并确保道本语有限的词汇量得到充分利用。]
 
@@ -288,20 +289,20 @@
 #zh[但这种技术并非没有缺点。道本语作为一门语言，其最大的问题或许在于其猖獗的歧义性。在只有125个单词的语言中，语义模糊是意料之中的，但实际上的主要困扰源于语法。由于没有明确的系动词，因此很难判断一个句子是否包含动词。此外，由于TP介词可以充当多种词类，并且可以不与谓语分隔符一起使用，解析某些句子可能非常困难。]
 
 #zh(example[
-soweli li moku.
+  soweli li moku.
 
-_动物吃。_或者 _动物是食物。_
+  _动物吃。_或者 _动物是食物。_
 
-mi wile e tomo tawa sina.
+  mi wile e tomo tawa sina.
 
-_我想要你的车（移动的建筑）。_或者 _我为你想要一所房子（建筑）。_
+  _我想要你的车（移动的建筑）。_或者 _我为你想要一所房子（建筑）。_
 ])
 
 #zh[除了语法歧义外，道本语还有其他几个问题：
 
-+ 它并不是一种真正的递归语言：它没有从句，因此使得某些句子难以表达（例如，“我宁愿去游泳”很难翻译）。
-+ 词汇选择存在不足——至少在试图在日常生活中交流的视角下是如此。（但从该语言声称的“极度可爱”目标看，它是完美的：在它的百来个词汇中，相当大一部分用于描述动物：有鸟、鱼、可爱动物、非可爱动物、动物叫声拟声词等的专门词。）
-+ 语言简朴的音位系统使得词根难以辨认。眯眼细看，“toki”有点像英语的“talk（说）”，“pona”有点像拉丁语的“bona（好）”，但这很牵强。其他词则更难辨认。
+  + 它并不是一种真正的递归语言：它没有从句，因此使得某些句子难以表达（例如，“我宁愿去游泳”很难翻译）。
+  + 词汇选择存在不足——至少在试图在日常生活中交流的视角下是如此。（但从该语言声称的“极度可爱”目标看，它是完美的：在它的百来个词汇中，相当大一部分用于描述动物：有鸟、鱼、可爱动物、非可爱动物、动物叫声拟声词等的专门词。）
+  + 语言简朴的音位系统使得词根难以辨认。眯眼细看，“toki”有点像英语的“talk（说）”，“pona”有点像拉丁语的“bona（好）”，但这很牵强。其他词则更难辨认。
 ]
 
 #zh[歧义性对于人造语言尤其不利，因为它们缺乏自然语言所拥有的历史规范和社区标准。对于其词语用法，如果没有共享的社会预警，明确的规则就变得更重要。]
@@ -319,27 +320,84 @@ _我想要你的车（移动的建筑）。_或者 _我为你想要一所房子�
 #zh[这种变化有助于大量减少歧义，而只需要一个额外的粒子。]
 
 #zh(example(table(
-align: (left, left),
-[Animale i manja.], [动物吃。],
-[Animale a manja.], [动物是食物。],
-[Animale e manja.], [动物是食物性的（即可食用）。],
-[Animale i manja a veji. ], [动物吃植物。]
+  align: (left, left),
+  [Animale i manja.],
+  [动物吃。],
+  [Animale a manja.],
+  [动物是食物。],
+  [Animale e manja.],
+  [动物是食物性的（即可食用）。],
+  [Animale i manja a veji. ],
+  [动物吃植物。],
 )))
 
 #zh[与像英语这样只有一个主要的系词（动词“to be”）的语言相比，
-有两个不同的粒子用于谓语似乎具有不必要的学术性。但根据先前迭代的语言版本的我的使用经验，我可以向你保证，事实并非如此！]
+  有两个不同的粒子用于谓语似乎具有不必要的学术性。但根据先前迭代的语言版本的我的使用经验，我可以向你保证，事实并非如此！]
 
-#zh[#pagebreak() 考虑一下这两个 Mini 句子：]
+#zh[#pagebreak() 考虑一下这两个Mini语句子：]
 
 #zh(example(table(
-align: (left, left),
-[Da e duro.], [这很困难。],
-[Da a duro.], [这是个问题。]
+  align: (left, left),
+  [Da e duro.],
+  [这很困难。],
+  [Da a duro.],
+  [这是个问题。],
 )))
 
 #zh[
-它们之间有天壤之别！如果你对正与困难作斗争的人说第一句，他们可能将其解读为一种共情的表态：“我明白你正在处理的事情很困难，我深有同感，但请继续。”而在实际交谈中说后一句将表明对方所做之事效率低下，需要改变。]
+  它们之间有天壤之别！如果你对正与困难作斗争的人说第一句，他们可能将其解读为一种共情的表态：“我明白你正在处理的事情很困难，我深有同感，但请继续。”而在实际交谈中说后一句将表明对方所做之事效率低下，需要改变。]
 
+#zh[英语通过两种方式解决形容词和名词谓语的区分问题：1.使用主要是单一词性的词，2.借助冠词。Mini语既缺少后者，其设计又明确禁止前者，因此必须借助语法助词（粒子）来标识词类。道本语未采用这种机制，这使得某些现实场景中的交流变得尤为困难。]
+
+#zh[Mini主要通过更严格的语序规则——尤其是针对介词和连词的使用——解决了道本语剩余的语法歧义问题：]
+
+#zh(example[
+  Mi toma go tu a kosa.
+
+_我把它带给你。_
+
+Mi toma a kosa go tu.
+
+_我为你准备了这个东西。_
+
+I go eki!
+
+_走开！_
+])
+
+#zh[然而，为了在语法上与英语对标，Mini引入了许多道本语中不存在的语法结构：存在句、动词时态、分词、比较级、从句、复合词等。]
+
+#zh[这些语法扩展主要通过赋予现有词汇新释义来实现，仅需补充少量语法虚词（除前文介绍的粒子外）：]
+
+#zh(example[En-i ave go, viro i de vole go baka.
+
+_离开后，那人想回去。_
+
+A nulo ke mi vole ma sama ke tu kite.
+
+_相比你离开，没什么让我更想要的了#text(12pt)[（我最迫切希望你离开）]。_
+
+Mi da manja a pan, pero si ave a mala aroma.
+
+_我会吃这些面包，但它的味道很难闻。_
+
+])
+
+#zh[由此形成的语法体系在表达能力上与英语相当，但词汇量仅需其零头。]
+
+#zh[与设计Mini语语法同样艰难的是构建其词汇库。首要任务是确定音系与正字法。我欣赏道本语追求音系简洁的坚持及其受南岛语系启发的"辅音-元音"音节结构，但也希望像世界语那样保证充分的词源透明度。另一项硬性要求是发音与拼写必须严格一一对应。]
+
+#zh[而这需要微妙的平衡。道本语和世界语可视为词源透明度的两个极端：世界语中"科学"写作scienco，读作/st͡siˈent͡so/，简直就是人类语言中指甲刮黑板的声音——但至少能看出与science同源；而道本语的"知识/科学"sona虽发音简单，词源却难以追溯。]
+
+#zh[我的折中方案是将字母扩展至19个（a b d e f g i j k l m n o p r s t u v），同时保留"辅音-元音"音节结构。这种音系规则既能确保词根的辨识度，又保持发音简易性。Mini语采用与德语、马来语等相同的五元音系统，辅音发音与英语对应，不设双元音或辅音丛。]
+
+#zh[的确，对于一个固定小词汇量的语言，19个字母略显奢侈——只须一半就足够了（或者，如果你是一台电脑，两个就够了）。但其增加的字母复杂度可完全被全球更广人群的词汇识别优势抵消。（较大字母表的另一好处是发音容错性强，/v/读作/w/、/f/或/b/都不影响理解。）]
+
+#zh[我的选词策略是在语音限制下优先选取全球识别度最高的词汇，同时尽可能涵盖更多语言。这自然导致多数（但不是全部！）的词汇源自英语或罗曼语族——两者分别是全球母语者第一和第三大语系（若将罗曼语族视为整体），且都拥有足够多符合Mini语要求发音简单的词汇。]
+
+#zh[对于许多缺乏"国际通用词"的概念，我随意地从更广泛的语言池中取材，优先考虑使用人口多的语言及未覆盖语系。最终形成的词汇库既具国际辨识度，又涵盖从拉科塔语到匈牙利语再到祖鲁语的多样性。]
+
+#split
 //
 //
 
@@ -353,8 +411,8 @@ align: (left, left),
 
 
 #align(center)[#text(
-    15pt,
-  )[*a ~b ~d ~e ~f ~g ~i ~j ~k ~l ~m ~n ~o ~p ~r ~s ~t ~u ~v*]]
+  15pt,
+)[*a ~b ~d ~e ~f ~g ~i ~j ~k ~l ~m ~n ~o ~p ~r ~s ~t ~u ~v*]]
 
 #en[Each letter matches its International Phonetic Alphabet pronunciation with the exception of J, which is the English /dʒ/.]
 
@@ -651,9 +709,7 @@ align: (left, left),
 
 #zh(example(table(
   columns: 6,
-  [mi], [第一人称],
-  [tu], [第二人称],
-  [si], [第三人称],
+  [mi], [第一人称], [tu], [第二人称], [si], [第三人称],
 )))
 
 #zh[代词没有性或数的词形变化。如需表示复数或性别，必须附加特定词语如_ale_或_feme_。语法上，这些词被视为复合名词。]
@@ -771,18 +827,17 @@ align: (left, left),
       [Mi e sama tu.],
       [我就像你。],
     )
-      }),
+  }),
 )
 
 #zh(example(table(
-      align: (left, left),
-[Mi i toma a kosa go tu.],
-      [我把东西带给你。],
-      [Alisa i viva en London.],
-      [艾丽丝住在伦敦。],
-      [Man en pan-botega i manja.],
-      [在面包房的人在吃。],
-  
+  align: (left, left),
+  [Mi i toma a kosa go tu.],
+  [我把东西带给你。],
+  [Alisa i viva en London.],
+  [艾丽丝住在伦敦。],
+  [Man en pan-botega i manja.],
+  [在面包房的人在吃。],
 )))
 
 #zh[除了上述五个主要介词外，Mini 还使用了以下介词：]
